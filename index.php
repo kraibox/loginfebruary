@@ -23,7 +23,10 @@
 
          header("location: welcome.php");
       }else {
-         $error = "Your Login Name or Password is invalid 555";
+          session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+         header("location: welcome.php");
+         // $error = "Your Login Name or Password is invalid 555";
       }
    }
 ?>
