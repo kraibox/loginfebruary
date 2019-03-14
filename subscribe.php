@@ -12,8 +12,8 @@ $mqtt = new phpMQTT($server, $port, $client_id);
 if( !$mqtt->connect(true, NULL, $username, $password) ) {
  exit(1);
 }
-
-$topics['test/topic'] = array("qos" => 0, "function" => "procmsg");
+//$topics['test/topic'] = array("qos" => 0, "function" => "procmsg");
+$topics['led'] = array("qos" => 0, "function" => "procmsg");
 $mqtt->subscribe($topics, 0);
 
 while($mqtt->proc()){
