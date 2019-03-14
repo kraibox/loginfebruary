@@ -17,7 +17,7 @@ $topics['led'] = array("qos" => 0, "function" => "procmsg");
 $mqtt->subscribe($topics, 0);
 echo "Start2\n";
 while($mqtt->proc()){
-
+echo "Start3\n\n";
 }
 
 $mqtt->close();
