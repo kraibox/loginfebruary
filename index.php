@@ -18,8 +18,8 @@ $topics['led'] = array("qos" => 0, "function" => "procmsg");
 
 $mqtt->subscribe($topics, 0);
  echo "Start\n\n";
-//echo "DATA : $mqtt \n\n";
-
+echo "Topic: {$topic}\n";
+ echo "Message: $msg\n\n";
 
 //while($mqtt->proc()){
 
