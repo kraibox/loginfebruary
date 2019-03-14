@@ -18,8 +18,10 @@ $topics['led'] = array("qos" => 0, "function" => "procmsg");
  echo "Start3\n\n";
 $mqtt->subscribe($topics, 0);
  echo "Start4\n\n";
+
+procmsg($topic, $msg);
 echo "Recieved at: " . date("Y-m-d H:i:s", time()) . "\n";
-//procmsg($topic, $msg);
+echo "Message: $msg\n\n";
 //while($mqtt->proc()){
 
 //}
