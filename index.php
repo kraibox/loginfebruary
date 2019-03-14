@@ -10,7 +10,7 @@ $password = "qyHizNCHb3a3";  //password ที่ได้สร้างไว�
 
 //$mqtt = new phpMQTT($server, $port, $client_id);
 
- $mqtt = new phpMQTT($host, $port, “ClientID”.rand());
+$mqtt = new phpMQTT($host, $port, “ClientID”.rand());
 if(!$mqtt->connect(true,NULL,$username,$password)){
 exit(1);
 }
@@ -22,9 +22,7 @@ $mqtt->subscribe($topics,0);
 while($mqtt->proc()){
 }
 $mqtt->close();
-
 function procmsg($topic,$msg){
 echo “Msg Recieved: $msg”.”\r\n”;
 }
-
 ?>
