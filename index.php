@@ -21,11 +21,13 @@ $mqtt->subscribe($topics, 0);
 //}
 
 //$mqtt->close();
-
 function procmsg($topic, $msg){
-  echo "Recieved at: " . date("Y-m-d H:i:s", time()) . "\n";
-  echo "Topic: {$topic}\n";
-  echo "Message: $msg\n\n";
+  echo "Msg Recieved: $msg\n";
 }
+//function procmsg($topic, $msg){
+//  echo "Recieved at: " . date("Y-m-d H:i:s", time()) . "\n";
+//  echo "Topic: {$topic}\n";
+//  echo "Message: $msg\n\n";
+// }
 
 ?>
