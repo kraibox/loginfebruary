@@ -13,19 +13,19 @@ if( !$mqtt->connect(true, NULL, $username, $password) ) {
  exit(1);
 }
 //$topics['test/topic'] = array("qos" => 0, "function" => "procmsg");
-$topics['led'] = array("qos" => 0, "function" => "procmsg");
-$mqtt->subscribe($topics, 0);
+//$topics['led'] = array("qos" => 0, "function" => "procmsg");
+//$mqtt->subscribe($topics, 0);
 
-while($mqtt->proc()){
+//while($mqtt->proc()){
 
-}
+//}
 
-$mqtt->close();
+//$mqtt->close();
 
-function procmsg($topic, $msg){
-  echo "Recieved at: " . date("Y-m-d H:i:s", time()) . "\n";
-  echo "Topic: {$topic}\n";
-  echo "Message: $msg\n\n";
-}
+//function procmsg($topic, $msg){
+//  echo "Recieved at: " . date("Y-m-d H:i:s", time()) . "\n";
+//  echo "Topic: {$topic}\n";
+//  echo "Message: $msg\n\n";
+//}
 
 ?>
