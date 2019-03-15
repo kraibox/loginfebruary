@@ -11,7 +11,7 @@ $password = "qyHizNCHb3a3";  //password ที่ได้สร้างไว�
 $mqtt = new phpMQTT($server, $port, $client_id);
 
 if ($mqtt->connect(true, NULL, $username, $password)) {
- $mqtt->publish("led", "Hello World! George publisher.", 0);
+ $mqtt->publish("led", "Hello World! George5 publisher.", 0);
  $mqtt->close();
 } else {
     echo "Time out!\n";
