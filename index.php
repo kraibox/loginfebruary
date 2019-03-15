@@ -1,7 +1,5 @@
 <?php
 require "phpMQTT.php";
-  echo "Connect11\n\n";
-
  
 $server  = "m16.cloudmqtt.com";
 $port  = 14303;
@@ -13,10 +11,10 @@ $mqtt = new phpMQTT($server, $port, $client_id);
 
  echo "Connect22\n\n";
 
-if (!$mqtt->connect()) {
-   echo "Exit55\n\n";
-    exit(1);
-}
+\\if (!$mqtt->connect()) {
+\\   echo "Exit55\n\n";
+\\    exit(1);
+\\}
 echo "topics\n\n";
 $topics["led"] = array("qos" => 0, "function" => "procmsg");
 $mqtt->subscribe($topics, 0);
