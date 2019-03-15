@@ -8,6 +8,7 @@ $mqtt = new phpMQTT("m16.cloudmqtt.com", 14303, $client_id);
  echo "Connect12\n\n";
 
 if (!$mqtt->connect()) {
+   echo "Exit\n\n";
     exit(1);
 }
 echo "topics\n\n";
