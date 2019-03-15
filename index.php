@@ -3,8 +3,10 @@ require "phpMQTT.php";
   echo "Connect11\n\n";
 
   $client_id = "Client-".rand();
-
+  
 $mqtt = new phpMQTT("m16.cloudmqtt.com", 14303, $client_id);
+ echo "Connect12\n\n";
+
 if (!$mqtt->connect()) {
     exit(1);
 }
