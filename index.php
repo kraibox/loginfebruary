@@ -2,13 +2,19 @@
 require "phpMQTT.php";
   echo "Connect11\n\n";
 
-  $client_id = "Client-".rand();
-  
-$mqtt = new phpMQTT("m16.cloudmqtt.com", 14303, $client_id);
- echo "Connect12\n\n";
+ 
+$server  = "m16.cloudmqtt.com";
+$port  = 14303;
+$username = "vuwseiaf";  //username ที่ได้สร้างไว้ตอนตั้งค่า MQTT Broker
+$password = "qyHizNCHb3a3";  //password ที่ได้สร้างไว้ตอนตั้งค่า MQTT Broker
+ $client_id = "Client-".rand();
+
+$mqtt = new phpMQTT($server, $port, $client_id);
+
+ echo "Connect22\n\n";
 
 if (!$mqtt->connect()) {
-   echo "Exit\n\n";
+   echo "Exit55\n\n";
     exit(1);
 }
 echo "topics\n\n";
