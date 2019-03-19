@@ -17,7 +17,7 @@ if( !$mqtt->connect(true, NULL, $username, $password) ) {
   echo "Fail\n\n";
  exit(1);
 }
-echo "Connected.. Start subscribe\n\n";
+echo "Connected.. Start subscribe\n : $query :\n";
   $topics[$query] = array("qos" => 0, "function" => "procmsg");
 // $topics['text'] = array("qos" => 0, "function" => "procmsg");
 //$mqtt->subscribe($topics, 0);
