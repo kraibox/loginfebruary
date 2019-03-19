@@ -25,10 +25,10 @@ if ($mqtt->connect(true, NULL, $username, $password)) {
   $topics[$query] = array("qos" => 0,"function" => "procmsg");
   $mqtt->subscribe($topics,0);
   echo "Connected..  subscribe ok\n : $query :\n";
-while($mqtt->proc()) {}
-  $mqtt->close();
-} else {
-  exit(1);
+//while($mqtt->proc()) {}
+//  $mqtt->close();
+//} else {
+//  exit(1);
 }
 
 
