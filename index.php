@@ -22,11 +22,11 @@ echo "Start subscribe\n\n";
  $topics['bluerhinos/phpMQTT/examples/publishtest'] = array("qos" => 0, "function" => "procmsg");
 $mqtt->subscribe($topics, 0);
 
-while($mqtt->proc()){
+//while($mqtt->proc()){
 		
-}
+//}
 
-//$mqtt->close();
+$mqtt->close();
 
 function procmsg($topic, $msg){
   echo "Recieved at: " . date("Y-m-d H:i:s", time()) . "\n";
