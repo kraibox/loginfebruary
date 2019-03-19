@@ -22,7 +22,7 @@ echo "Connected.. Start subscribe1\n : $query :\n";
 echo "Connected.. Start subscribe2\n : $query :\n";
 
 // $mqtt_client->subscribe($topics,0);
-$mqtt_client->subscribe($query,0);
+$mqtt_client->subscribe("led",0);
 echo ": subscribe query OK...........\n\n";
 
 
