@@ -26,8 +26,8 @@ $mqtt->subscribe("led",0);
 echo ": subscribe query OK...........\n\n";
 
 
-while ($mqtt->proc()) {
-}
+//while ($mqtt->proc()) {
+//}
 
 
 $mqtt->close();
