@@ -19,7 +19,7 @@ if( !$mqtt->connect(true, NULL, $username, $password) ) {
 }
 echo "Start subscribe\n\n";
 $topics['led'] = array("qos" => 0, "function" => "procmsg");
-//$mqtt->subscribe($topics, 0);
+$mqtt->subscribe($topics, 0);
 
 //while($mqtt->proc()){
 
