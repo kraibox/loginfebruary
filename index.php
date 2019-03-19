@@ -24,7 +24,9 @@ $mqtt->subscribe($topics, 0);
 echo ": subscribe OK\n\n";
 
 //while($mqtt->proc()){
-		
+while($mqtt->proc()){
+ 
+}		
 //}
 
 $mqtt->close();
