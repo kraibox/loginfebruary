@@ -4,7 +4,7 @@
 <?php
 
 require("phpMQTT.php");
-
+  $query = "text";
 $server = "m16.cloudmqtt.com"; //"m16.cloudmqtt.com" ;     // change if necessary
 $port  = 14303;
 $username = "vuwseiaf";  //username ที่ได้สร้างไว้ตอนตั้งค่า MQTT Broker
@@ -18,11 +18,11 @@ if( !$mqtt->connect(true, NULL, $username, $password) ) {
  exit(1);
 }
 echo "Connected.. Start subscribe\n\n";
-
- $topics['text'] = array("qos" => 0, "function" => "procmsg");
+  $topics[$query] = array("qos" => 0, "function" => "procmsg");
+// $topics['text'] = array("qos" => 0, "function" => "procmsg");
 //$mqtt->subscribe($topics, 0);
 $mqtt_client->subscribe($topics, 0);
-echo ": subscribe OK\n\n";
+echo ": subscribe query OK...........\n\n";
 
 //while($mqtt->proc()){
 while ($mqtt_client->proc()) {
