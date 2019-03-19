@@ -10,12 +10,14 @@ $port  = 14303;
 $username = "vuwseiaf";  //username ที่ได้สร้างไว้ตอนตั้งค่า MQTT Broker
 $password = "qyHizNCHb3a3";  //password ที่ได้สร้างไว้ตอนตั้งค่า MQTT Broker
 $client_id = "Client-".rand();
-  echo "Start\n";
+  echo "Start login\n\n";
 $mqtt = new phpMQTT($server, $port, $client_id);
+ echo "connecting!\n\n";
 if( !$mqtt->connect(true, NULL, $username, $password) ) {
+  echo "Fail\n\n";
  exit(1);
 }
-//$topics['test/topic'] = array("qos" => 0, "function" => "procmsg");
+echo "Start subscribe\n\n";
 $topics['led'] = array("qos" => 0, "function" => "procmsg");
 $mqtt->subscribe($topics, 0);
 
