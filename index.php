@@ -17,7 +17,7 @@ if( !$mqtt->connect(true, NULL, $username, $password) ) {
   echo "Fail\n\n";
  exit(1);
 }
-echo "Start subscribe\n\n";
+echo "Connected.. Start subscribe\n\n";
 
  $topics['bluerhinos/phpMQTT/examples/publishtest'] = array("qos" => 0, "function" => "procmsg");
 $mqtt->subscribe($topics, 0);
