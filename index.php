@@ -26,9 +26,13 @@ echo ": subscribe query OK...........\n\n";
 
 //while ($mqtt->proc()) {
 //}
+while($mqtt->proc()) {}
+  $mqtt->close();
+} else {
+  exit(1);
+}
 
 
-$mqtt->close();
 
 function procmsg($topic, $msg){
   echo "Recieved at: " . date("Y-m-d H:i:s", time()) . "\n";
