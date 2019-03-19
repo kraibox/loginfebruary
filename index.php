@@ -28,8 +28,7 @@ if ($mqtt->connect(true, NULL, $username, $password)) {
  }
 
 
-//while ($mqtt->proc()) {
-//}
+while ($mqtt->proc()) {}
  
 
 
