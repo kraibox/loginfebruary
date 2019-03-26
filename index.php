@@ -18,6 +18,9 @@ if( !$mqtt->connect(true, NULL, $username, $password) ) {
 $topics['test/topic'] = array("qos" => 0, "function" => "procmsg");
 $mqtt->subscribe($topics, 0);
  echo "Subscribe ok!!\n\n";
+ echo "Recieved at: " . date("Y-m-d H:i:s", time()) . "\n";
+  echo "Topic: {$topic}\n";
+  echo "Message: $msg\n\n";
 //while($mqtt->proc()){}
 
 $mqtt->close();
