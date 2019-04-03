@@ -12,7 +12,7 @@ $mqtt = new phpMQTT($server, $port, $client_id);
 
 if ($mqtt->connect(true, NULL, $username, $password)) {
  $mqtt->publish("API1", "88", 0);
- delay(2000);
+// delay(2000);
  $mqtt->publish("API1", "22", 0);
  $mqtt->close();
 } else {
