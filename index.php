@@ -12,6 +12,8 @@ $mqtt = new phpMQTT($server, $port, $client_id);
 
 if ($mqtt->connect(true, NULL, $username, $password)) {
  $mqtt->publish("API1", "88", 0);
+ millis(10000);
+ $mqtt->publish("API1", "22", 0);
  $mqtt->close();
 } else {
     echo "Time out!\n";
