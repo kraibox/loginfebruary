@@ -14,6 +14,10 @@ if ($mqtt->connect(true, NULL, $username, $password)) {
  $mqtt->publish("API1", "88", 0);
 sleep(5);
  $mqtt->publish("API1", "22", 0);
+ sleep(5);
+ $mqtt->publish("API1", "38", 0);
+sleep(5);
+ $mqtt->publish("API1", "72", 0);
  $mqtt->close();
 } else {
     echo "Time out!\n";
