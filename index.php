@@ -10,6 +10,7 @@ $client_id = "Client-".rand();
   echo "Start\n";
 $mqtt = new phpMQTT($server, $port, $client_id);
 if( !$mqtt->connect(true, NULL, $username, $password) ) {
+    echo "error\n";
  exit(1);
 }
 //$topics['test/topic'] = array("qos" => 0, "function" => "procmsg");
