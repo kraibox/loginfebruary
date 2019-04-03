@@ -17,7 +17,7 @@ $topics['API1'] = array("qos" => 0, "function" => "procmsg");
 $mqtt->subscribe($topics, 0);
 
 //while($mqtt->proc()){}
-sleep(10);
+//sleep(10);
 $mqtt->close();
 
 function procmsg($topic, $msg){
