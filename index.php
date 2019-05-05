@@ -19,7 +19,8 @@ sleep(10);
 sleep(10);
  $mqtt->publish("hb", "2", 0);
 Sleep(10);
- $mqtt->close();
+echo "ok\n";
+ //$mqtt->close();
 } else {
     echo "Time out!\n";
 }
