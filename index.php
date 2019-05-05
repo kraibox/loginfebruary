@@ -15,7 +15,7 @@ if ($mqtt->connect(true, NULL, $username, $password)) {
 sleep(5);
  $mqtt->publish("hb", "2", 0);
  sleep(5);
- $mqtt->publish("hb", "3", 0);
+ $mqtt->publish("hb", "4", 0);
 sleep(5);
  $mqtt->publish("hb", "2", 0);
  $mqtt->close();
