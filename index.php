@@ -12,12 +12,13 @@ $mqtt = new phpMQTT($server, $port, $client_id);
 While(1){
 if ($mqtt->connect(true, NULL, $username, $password)) {
  $mqtt->publish("hb", "3", 0);
-sleep(5);
+sleep(10);
  $mqtt->publish("hb", "2", 0);
- sleep(5);
- $mqtt->publish("hb", "4", 0);
-sleep(5);
+ sleep(10);
+ $mqtt->publish("hb", "3", 0);
+sleep(10);
  $mqtt->publish("hb", "2", 0);
+Sleep(10);
  $mqtt->close();
 } else {
     echo "Time out!\n";
