@@ -9,7 +9,7 @@ $password = "qyHizNCHb3a3";  //password ที่ได้สร้างไว�
  $client_id = "Client-".rand();
 
 $mqtt = new phpMQTT($server, $port, $client_id);
-While(){
+While(1){
 if ($mqtt->connect(true, NULL, $username, $password)) {
  $mqtt->publish("API1", "88", 0);
 sleep(5);
