@@ -12,13 +12,13 @@ $mqtt = new phpMQTT($server, $port, $client_id);
  
 if ($mqtt->connect(true, NULL, $username, $password)) {
  $mqtt->publish("hb", "3", 0);
-sleep(1);
+sleep(20);
  $mqtt->publish("hb", "2", 0);
- sleep(1);
- $mqtt->publish("hb", "6", 0);
-sleep(1);
+ sleep(20);
+ $mqtt->publish("hb", "3", 0);
+sleep(29);
  $mqtt->publish("hb", "2", 0);
-Sleep(1);
+Sleep(20);
 echo "ok\n";
  $mqtt->close();
 } else {
